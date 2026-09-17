@@ -2,47 +2,28 @@ import { useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
-import './App.css'
+import './App.css';
+import Header from './components/Header.jsx';
+import Technology from './components/Technology.jsx';
+import Footer from './components/Footer.jsx';
+import Student from './components/Student.jsx';
+import InfoBox from './components/InfoBox.jsx';
 
 function App() {
-
-  const app = {
-    name: "WebTech",
-    version: "1.0",
-    author: "Jakub Szajna",
-    technologiesCount: 3
-  };
-
-  const student = {
-  name: "Jakub",
-  surname: "Szajna",
-  className: "4P",
-  specialization: "technik programista"
-};
-
-const course = {
-  name: "Programowanie webowe",
-  teacher: "Rafał Taraszka",
-  hours: 67,
-  completed: true
-};
-
   return (
-    <div>
+    <>
+      <Header />
+      <main>
+        <Technology />
+        <Technology />
+        <Technology />
 
-      <h1>Uczeń: {student.name} {student.surname}</h1>
+        <Student/>
 
-      <p>Klasa: {student.className}</p>
-
-      <p>Kierunek: {student.specialization}</p>
-
-      <section>
-        <h2>Nazwa kursu: {course.name}</h2>
-        <p>Nauczyciel: {course.teacher}</p>
-        <p>Liczba godzin: {course.hours}</p>
-
-      </section>
-    </div>
+        <InfoBox/>
+      </main>
+      <Footer />
+    </>
   );
 }
 
